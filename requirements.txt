@@ -1,0 +1,5 @@
+edflib
+numpy
+pywt
+resampy
+scipy
