@@ -91,7 +91,9 @@ def load_data(filename):
     Args:
         filename: string containing path to EDF files
     returns:
-        np.array: two behind the ear channels [left, right]
+        np.array: data of the two behind the ear channels [left, right]
+        int: Sampling frequency in Hz
+        list: List of channel names
     """
     channels = ['LiOorTop',
                 'LiOorAchter',
