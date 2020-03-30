@@ -67,6 +67,9 @@ def bipolar_rereference(data, channel_labels):
     bipolar_pairs = (('LiOorTop', 'LiOorAchter'),
                      ('ReOorTop', 'ReOorAchter'),
                      ('LiOorAchter', 'ReOorAchter'))
+    bipolar_pairs = (('T3', 'T5'),
+                     ('T4', 'T6'),
+                     ('T5', 'T6'))
     bipolar_data = list()
     bipolar_labels = list()
     for i, bipolar_pair in enumerate(bipolar_pairs):
@@ -99,6 +102,10 @@ def load_data(filename):
                 'LiOorAchter',
                 'ReOorTop',
                 'ReOorAchter']
+    channels = ['T3',
+                'T5',
+                'T4',
+                'T6']
 
     with pyedflib.EdfReader(filename) as edf:
         fs = edf.getSampleFrequency(0)
